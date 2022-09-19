@@ -19,7 +19,8 @@
  *    Evgeny Gryaznov - initial API and implementation
  */
 
-header("Location: operator/index.php");
-exit;
+require_once('libs/common.php');
 
+start_html_output();
+require('view/license.php');
 ?>

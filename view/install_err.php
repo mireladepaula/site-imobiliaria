@@ -19,7 +19,20 @@
  *    Evgeny Gryaznov - initial API and implementation
  */
 
-header("Location: operator/index.php");
-exit;
+$page['title'] = getlocal("install.err.title");
+$page['no_right_menu'] = true;
+$page['fixedwrap'] = true;
 
+function tpl_content() { global $page, $webimroot, $errors;
+?>
+
+<?php 
+require_once('inc_errors.php');
+?>
+<?php echo getlocal("install.err.back") ?>
+
+<?php 
+} /* content */
+
+require_once('../view/inc_main.php');
 ?>
